@@ -1,0 +1,11 @@
+Google spreadsheet:
+https://docs.google.com/spreadsheet/ccc?key=0AoQmncVLKXRBdE85Vlh5UTlBUEY4cURhTW5oN0s5RVE#gid=0
+
+Matlab:
+Log2 problem (page 22 of Mindless) is present, log2(1+eps)/(1 + eps - 1) = 0.5 or 2 or something else depending on rounding mode.
+
+Octave:
+Log2 problem (page 22 of Mindless) not present
+
+Julia
+Log2 problem (page 22 of Mindless) not present
