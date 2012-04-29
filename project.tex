@@ -8,7 +8,7 @@
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 \newcommand{\cAuthor}{Raphael Sofaer}
-\newcommand{\cTitle}{Trendlines and numerical issues in Google Spreadsheet}
+\newcommand{\cTitle}{Trendlines and Numerical Issues in Google Spreadsheet}
 \pagestyle{fancy}
 \lhead{\cAuthor}                                                 %
 \rhead{\cTitle}  %
@@ -43,7 +43,7 @@ as well as some related quirks of Google Spreadsheet.
 It can be difficult to tell what sort of floating point math a spreadsheet program uses.
 Microsoft Excel, for instance, uses cosmetic rounding to make binary floating point numbers
 appear to be decimal floating point numbers
-\footnote{How Futile are Mindless\dots: http://www.cs.berkeley.edu/~wkahan/Mindless.pdf}.
+\footnote{How Futile are Mindless\dots, Errors designed not to be found: http://www.cs.berkeley.edu/~wkahan/Mindless.pdf}.
 Google, on the other hand, made no attempt to confirm or deny the floating-point truth.
 To the best of my knowledge, exhibited below, Google uses software implemented decimal floating point.\\
 
@@ -126,35 +126,102 @@ When $j=0$, there is no numerical error ($R^2=1$).
 However, by the time $j=5$, we begin to see error creep into the numbers ($R^2 = 0.999999999999965$).
 By the time $j=7$, only one correct decimal place remains,
 creating barely visible error ($R^2=0.99999438640566$).\\
+\begin{figure}[h!]
+  \caption{${(1 + i/10^{7}, i + 1)}$ in Google Spreadsheet}
+  \centering
 \includegraphics[width=4in]{TRENDj7.png}\\
+\end{figure}\\
 When $j=8$, the trendline has ventured out alone, with an $R^2$ value of $0.983604355317896$.\\
+\begin{figure}[h!]
+  \caption{${(1 + i/10^{-8}, i + 1)}$ in Google Spreadsheet}
+  \centering
 \includegraphics[width=4in]{TRENDj8.png}\\
+\end{figure}
 \newpage
 At $j=9$, there is only madness.  Rather than a slope of $10^{j}$,
 the trendline has a small negative slope, and $R^2 =-0.078210891033562$.\\
+\begin{figure}[h!]
+  \caption{${(1 + i/10^{9}, i + 1)}$ in Google Spreadsheet}
+  \centering
 \includegraphics[width=4in]{TRENDj9.png}\\
-At $j=10$, the spreadsheet crashes, and the page reloads,
+\end{figure}\\
+At $j=10$, and any $j > 10$ which I tried, the spreadsheet crashes with the not-particularly-enlightening message:
+``Oops.  A server error occurred. The page will reload.'', and the page reloads,
 with the change forgotten.  This is a consistent result.\\
 
 By contrast, GNU Octave performs perfectly
 \footnote{Code used: ex = j; x = 1+0*10\^-ex:10\^-ex:1+12*10\^-ex; y = 1:13;[b,s,r] = ols(y,x);plot(x,y,x,x*b);axis([1 x(size(x)(2)) 0 14]);}
 up to $j=14$, the edge of its numerical precision.\\
+\begin{figure}[h!]
+  \caption{${(1 + i/10^{14}, i + 1)}$ in Octave}
+  \centering
 \includegraphics[width=4in]{TRENDocj14.png}\\
+\end{figure}
 \newpage
 Only when $j=15$ does Octave begin to reveal the underlying discrete nature of floating point.\\
+\begin{figure}[h!]
+  \caption{${(1 + i/10^{15}, i + 1)}$ in Octave}
+  \centering
 \includegraphics[width=4in]{TRENDocj15.png}\\
+\end{figure}\\
 At $j=16$, Octave finally has an error and displays nothing, but there is no crash, and 
 the failure to produce an answer makes sense, as $10^{-16}$, the spacing of the x coordinates,
-is $\approx \epsilon/2$, where $\epsilon$ is provided in Octave as eps.
+is $\approx \epsilon/2$, where $\epsilon$ is provided in Octave as eps.\\
 
 For better comparison with Kaplan's work on Excel, we also examined data series'
 of the form ${(1 + (i + 40)/2^{-j}, i)}$, where $1\le i \le 8$.
 Kaplan found that Excel's Trendline function only performed well with $j \le 25$,
-with bad error up to $j \le 27$, and various degrees of failure past that.
+with bad error up to $j \le 27$, and various degrees of failure past that.\\
+Google Spreadsheet preforms relatively well
+($1- R^2 \approx 10^{-10}$ and 5 correct significant digits) up to $j=19$.
+Up to $j=24$, the error is still not noticable in a chart, and $1-R^2 < 10^{-10}$,
+but even that accuracy is gone at $j=25$.\\
+\begin{figure}[h!]
+  \caption{${(1 + (40 + i)/2^{24}, i)}$ in Google Spreadsheet}
+  \centering
+\includegraphics[width=4in]{TREND2j24.png}\\
+\end{figure}\\
 
+When $j=25$, the error has become solidly visible.  $R^2 = 0.997914698999419$, and there is
+not even always 1 correct significant digit in the trendline.\\
+\begin{figure}[h!]
+  \caption{${(1 + (40 + i)/2^{25}, i)}$ in Google Spreadsheet}
+  \centering
+\includegraphics[width=4in]{TREND2j25.png}\\
+\end{figure}\\
 
+A little further, when $j=27$, $R^2 is down to 0.928172702124667$, and there is no mistaking
+the divergent lines in the chart.\\
+
+\begin{figure}[h!]
+  \caption{${(1 + (40 + i)/2^{27}, i)}$ in Google Spreadsheet}
+  \centering
+\includegraphics[width=4in]{TREND2j27.png}\\
+\end{figure}\\
+
+At $j\ge28$, we get our now familiar ``Oops'', and the page reloads.\\
+
+\newpage
 \section*{Conclusion}
-
+In this paper, we explored Google Spreadsheet's floating point numbers, and investigated
+the built-in TREND function.  Google Spreadsheet's TREND is significantly less accurate than
+the Excel function it is modeled after.  Where Excel had good performance up to a slope of 
+$10^25$\footnote{Kaplan 2010 http://cs.nyu.edu/courses/spring12/CSCI-UA.0421-001/kaplanproject.pdf},
+Google Spreadsheet had significant error by that time.
+When compared to functions from mathematical languages like Octave or Matlab, Google's showing
+is even poorer.  However, Google Spreadsheet has none of the sleight of hand that Excel uses
+to conceal the nature of floating point, and no magical parentheses
+\footnote{How Futile are Mindless\dots, Errors designed not to be found: http://www.cs.berkeley.edu/~wkahan/Mindless.pdf}.
+are needed to get functions to evaluate.
+On the other hand, when fatal errors do occur, Excel and Octave, and presumably most other programs,
+are able to display error messages, while Google seems to have decided that pretending the input
+which caused the error never occured is the most prudent route.
+Google should make their Spreadsheet more robust to ill-conditioned input, and display informative
+warnings and errors, rather than an ``Oops'', and a crash.  Ideally, they would improve the accuracy
+of their algorithms, but it is more important to let users know when a dangerous numerical situation
+has arisen, perhaps with Octave like warnings of ``a division by 0'', or ``rank deficient data''.
+For now, users who need robustness or whose data may be ill-conditioned should steer clear of 
+Google Spreadsheet's linear regression functionality.
 
 
 

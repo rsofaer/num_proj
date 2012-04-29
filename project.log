@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.21)  29 APR 2012 14:50
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.2.21)  29 APR 2012 18:17
 entering extended mode
  %&-line parsing enabled.
 **project.tex
@@ -171,6 +171,12 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[][]\OT1/cmr/m/n/8 How Fu-tile are Mind-less..., Er-rors de-signed not to be fo
+und:
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 43--49
 
  []
@@ -1142,27 +1148,22 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[3] <TRENDj7.png, id=22, 602.25pt x 372.39125pt>
+[3] <TRENDj7.png, id=22, 505.89pt x 313.17pt>
 File: TRENDj7.png Graphic file (type png)
  <use TRENDj7.png>
-<TRENDj8.png, id=23, 602.25pt x 372.39125pt>
+<TRENDj8.png, id=23, 512.91624pt x 317.185pt>
 File: TRENDj8.png Graphic file (type png)
  <use TRENDj8.png>
-Overfull \hbox (39.62517pt too wide) in paragraph at lines 125--132
+Overfull \hbox (39.62517pt too wide) in paragraph at lines 125--140
 \OT1/cmr/m/n/10 When $\OML/cmm/m/it/10 j \OT1/cmr/m/n/10 = 8$, the trend-line h
 as ven-tured out alone, with an $\OML/cmm/m/it/10 R[]$ \OT1/cmr/m/n/10 value of
  $0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 983604355317896$. 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--132
-
- []
-
 ! Undefined control sequence.
 \f@ncyolf ->\lastxmark 
                        \strut 
-l.132 \newpage
+l.140 \newpage
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1171,15 +1172,15 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [4 <./TRENDj7.png (PNG copy)> <./TRENDj8.png (PNG copy)>]
-<TRENDj9.png, id=27, 602.25pt x 372.39125pt>
+<TRENDj9.png, id=27, 512.91624pt x 317.185pt>
 File: TRENDj9.png Graphic file (type png)
  <use TRENDj9.png>
-Underfull \hbox (badness 10000) in paragraph at lines 133--138
+Underfull \hbox (badness 10000) in paragraph at lines 141--151
 
  []
 
 
-Underfull \hbox (badness 4132) in paragraph at lines 140--140
+Underfull \hbox (badness 4132) in paragraph at lines 153--153
 [][]\OT1/cmr/m/n/8 Code used: ex = j; x = 1+0*10^-ex:10^-ex:1+12*10^-ex; y = 1:
 13;[b,s,r] =
  []
@@ -1187,14 +1188,13 @@ Underfull \hbox (badness 4132) in paragraph at lines 140--140
 <TRENDocj14.png, id=28, 1204.5pt x 903.375pt>
 File: TRENDocj14.png Graphic file (type png)
  <use TRENDocj14.png>
-Underfull \hbox (badness 10000) in paragraph at lines 139--143
 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ! Undefined control sequence.
 \f@ncyolf ->\lastxmark 
                        \strut 
-l.143 \newpage
+l.160 \newpage
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1202,15 +1202,106 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[5 <./TRENDj9.png (PNG copy)> <./TRENDocj14.png (PNG copy)>]
-<TRENDocj15.png, id=33, 1204.5pt x 903.375pt>
+[5 <./TRENDj9.png (PNG copy)>] <TRENDocj15.png, id=32, 1204.5pt x 903.375pt>
 File: TRENDocj15.png Graphic file (type png)
- <use TRENDocj15.png>
+
+<use TRENDocj15.png>
+Underfull \hbox (badness 10000) in paragraph at lines 161--170
+
+ []
+
+! Undefined control sequence.
+\f@ncyolf ->\lastxmark 
+                       \strut 
+l.170 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[6 <./TRENDocj14.png (PNG copy)> <./TRENDocj15.png (PNG copy)>]
+<TREND2j24.png, id=38, 500.87125pt x 309.155pt>
+File: TREND2j24.png Graphic file (type png)
+ <use TREND2j24.png>
+Underfull \hbox (badness 10000) in paragraph at lines 171--184
+
+ []
+
+<TREND2j25.png, id=39, 509.905pt x 315.1775pt>
+File: TREND2j25.png Graphic file (type png)
+ <use TREND2j25.png>
+Underfull \hbox (badness 10000) in paragraph at lines 185--192
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--195
+
+ []
+
+<TREND2j27.png, id=40, 503.8825pt x 311.1625pt>
+File: TREND2j27.png Graphic file (type png)
+ <use TREND2j27.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.201 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+! Undefined control sequence.
+\f@ncyolf ->\lastxmark 
+                       \strut 
+l.204 \newpage
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[7 <./TREND2j24.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 214--214
+[][]\OT1/cmr/m/n/8 How Fu-tile are Mind-less..., Er-rors de-signed not to be fo
+und:
+ []
+
+! Undefined control sequence.
+\f@ncyolf ->\lastxmark 
+                       \strut 
+l.225 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[8 <./TREND2j25.png (PNG copy)> <./TREND2j27.png (PNG copy)>]
 AED: lastpage setting LastPage
 ! Undefined control sequence.
 \f@ncyolf ->\lastxmark 
                        \strut 
-l.157 \end{document}
+l.228 \end{document}
                     
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1218,28 +1309,32 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[6 <./TRENDocj15.png (PNG copy)>] (./project.aux) ) 
+[9] (./project.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1706 strings out of 493848
- 22411 string characters out of 1152823
+ 1722 strings out of 493848
+ 22669 string characters out of 1152823
  77178 words of memory out of 3000000
- 4962 multiletter control sequences out of 15000+50000
+ 4975 multiletter control sequences out of 15000+50000
  10888 words of font info for 43 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 41i,10n,43p,281b,211s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fo
-nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10
-.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
-hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-t
-exlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/
-type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on project.pdf (6 pages, 176643 bytes).
+ 41i,10n,43p,281b,218s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
+/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></
+usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb>
+Output written on project.pdf (9 pages, 209582 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
